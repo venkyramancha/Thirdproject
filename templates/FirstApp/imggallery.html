@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imge-gallery-Django Apps</title>
+    <style>
+        body{
+            background-color:light yellow;
+        }
+        #h11{
+            background-color:yellow;
+            text-align:center;
+            color:blue;
+            border:2px Solid Brown;
+        }
+        #h44{
+            background-color:lightpink;
+            text-align:center;
+            color:red;
+            width:75%;
+            margin:auto;
+            border:1px Solid Red;
+
+        }
+        #div1{
+            border:5px Solid Red;
+            height:300px;
+        }
+        #div2,#div3{
+            border:2px Solid Green;
+            margin:3px;
+            height:47.5%;
+        }
+        .indiv{
+            border:1px Solid Maroon;
+            width:24.5%;
+            height:135px;
+            float:left;
+            margin:0.1%;
+
+        }
+        img{
+            border:1px dotted blue;
+            width:90%;
+            height:126px;
+            margin:3px;
+            margin-left:8px;
+
+
+        }
+        img:hover{
+            border:2px Solid Blue;
+            width:93%;
+            height:128px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id=h11>{{msg1}}</h1>
+    <h4 id=h44>Current Server Date & Time :: {{date1}}</h4>
+    <hr />
+    <div id="div1">
+        <div id="div2">
+            <div class="indiv"><img src="{%static 'images/GT1.jpg'%}" alt="GT1.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/GT2.jpg'%}" alt="GT2.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/GT3.jpg'%}" alt="GT3.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/GT4.jpg'%}" alt="GT4.jpg" /></div>
+        </div>
+        <div id="div3">
+            <div class="indiv"><img src="{%static 'images/REGT5.jpg'%}" alt="REGT5.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/REGT6.jpg'%}" alt="REGT6.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/REGT7.jpg'%}" alt="REGT7.jpg" /></div>
+            <div class="indiv"><img src="{%static 'images/REGT8.jpg'%}" alt="REGT8.jpg" /></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+</body>
+</html>

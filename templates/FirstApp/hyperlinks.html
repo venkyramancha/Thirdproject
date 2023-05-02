@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}   <!-- folder name-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperLinks DJango-App</title>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        #h11{
+            background-color: yellow;
+            text-align: center;
+            color:blue;
+            border:0.02% Solid Brown;
+        }
+       #h44{
+            background-color: lightpink;
+            text-align: center;
+            color:red;
+            width:75%;
+            margin:auto;
+            border:0.01% Solid Red;
+        }
+        #div1{
+            border: 0.05% Solid Red;
+            height:150px;
+        }
+        #div2{
+            border:0.02% Solid green;
+            height:99%;
+        }
+        .indiv{
+            border:0.01% Solid Maroon;
+            float:left;
+            width:24.5%;
+            height:135px;
+            margin:0.01%;
+            margin-top: 0.05%;
+        }
+        img{
+            border:0.01% dotted blue;
+            width:90%;
+            height:126px;
+            margin:0.03%
+            margin-left:0.08%;
+        }
+        img:hover{
+            border:0.01% Solid Blue;
+            width:95%;
+            height:130px;
+        }
+        p{
+            background-color: yellow;
+            border:0.02% Solid red;
+            color:red;
+            display: inline;
+            padding: 0.03%;
+        }
+        ol{
+            border: 0.02% Solid blue;
+            width:150px;
+            padding-top: 0.05%;
+            padding-bottom: 0.05%;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id=h11>{{msg1}}</h1>
+    <h4 id=h44>Current Server Date & Time :: {{date1}}</h4>
+    <hr />
+    <div id="div1">
+        <div id="div2">
+            <div class="indiv">
+                <a href="{%static 'images/Bugatti1.jpg'%}" target="blank">
+                    <img src="{%static 'images/Bugatti1.jpg'%}" alt="Bugatti1.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'images/Bugatti2.jpg'%}" target="_parent">
+                    <img src="{%static 'images/Bugatti2.jpg'%}" alt="Bugatti2.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'images/Bugatti3.jpg'%}" target="_self">
+                    <img src="{%static 'images/Bugatti3.jpg'%}" alt="Bugatti3.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'images/Bugatti4.jpg'%}" target="new">
+                    <img src="{%static 'images/Bugatti4.jpg'%}" alt="Bugatti4.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <p>Downloadable Files</p>
+    <ol>
+        <li><a href="{% static "other/python-3.11.1-amd64.exe" %}">Python Software</a></li>
+        <li><a href="{% static "other/npp.8.4.8.Installer.x64.exe" %}">Notepad++</a></li>
+    </ol>
+    <hr />
+    <audio controls>
+        <source src="{% static 'other/justin.mp3' %}" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <hr />
+    <video width="320" height="240" controls>
+        <source src="{% static 'other/Bugatti0.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <hr />
+    <video width="1280" height="720" controls>
+        <source src="https://youtu.be/qkbSLVr6WtQ" type="video">
+        Your browser does not support the video tag.
+    </video>
+    <hr />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XYQEUVl-8ZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>
